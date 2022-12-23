@@ -1,8 +1,13 @@
-# Rich Attention Heads Interaction in Vision Transformer
+# Improving Vision Transformers with Nested Multi-head Attentions
 
 ### Abstract
 
-Transformers have achieved great success in the field of natural language processing (NLP) due to the multi-head attention (MHA) mechanism. Inspired by this, more and more scholars introduce Transformers into computer vision to capture global information of images, achieving competitive performance to Convolutional Neural Networks (CNNs). However, many studies have found redundancy between the heads of the MHA due to the lack of interaction, which affects the performance of the model. Thanks to the explaining-away effects in the probabilistic graphical model, it becomes possible to improve the rich interaction among different heads. With the help of the hierarchical structure of the transformer, we pass head attention values layer by layer for fusion, which effectively improves the independence between heads. We conduct extensive experiments and demonstrate that our proposed model outperforms vanilla Vision Transformer (ViT), by 1.56% top1 accuracy on ImageNet1K in image classification,  2.66-3.47% improvement on downstream datasets of transfer learning, due to its improvements on the parameter efficiency and heads diversity.
+Vision transformers have significantly advanced the field of computer vision in recent years. 
+The cornerstone of vision transformers is the multi-head attention mechanism, which models the interactions between the visual elements within a feature map. 
+However, the vanilla multi-head attention paradigm learns the parameters of different heads independently and separately. 
+The crucial interactions across different attention heads are ignored, leading to the redundancy and under-utilization of the model's capacity. 
+In order to facilitate the model expressiveness, we propose a novel nested attention mechanism Ne-Att to explicitly model cross-head interactions via a hierarchical variational distribution. 
+Extensive experiments are conducted on image classification, and the experimental results demonstrate the superiority of Ne-Att.
 
 ## Getting Started
 
